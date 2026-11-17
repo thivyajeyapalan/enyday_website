@@ -142,11 +142,6 @@ p { text-wrap: pretty; }
   transform-origin: left center;
 }
 
-/* On phones, keep a long script label on one line */
-@media (max-width: 639px) {
-  .script-label.fit { font-size: 2.3rem; white-space: nowrap; }
-}
-
 /* Scroll reveal: content is visible by default; JS only animates elements that start below the fold */
 [data-reveal="pending"] { opacity: 0; transform: translateY(24px); }
 [data-reveal="shown"] {

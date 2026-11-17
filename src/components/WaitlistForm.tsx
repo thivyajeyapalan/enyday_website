@@ -5,7 +5,6 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { REFERRAL_OPTIONS } from "@/lib/site";
 import { CONSENT_TEXT, isValidEmail, type FieldErrors } from "@/lib/validation";
 import { Sparkle } from "./Logo";
-import { Tooth, Burst } from "./Doodles";
 import { Arrow, buttonClass } from "./ui";
 
 const TURNSTILE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
@@ -106,18 +105,18 @@ export function WaitlistForm() {
 
   const sending = state.kind === "sending";
   const inputClass = (bad?: string) =>
-    `mt-2 block w-full rounded-full bg-paper px-5 py-3.5 text-[1.05rem] text-cobalt placeholder:text-cobalt/35 ring-1 ring-inset transition outline-none focus:ring-2 focus:ring-cobalt ${
+    `mt-2 block w-full rounded-2xl bg-paper px-4 py-3.5 text-[1.05rem] text-cobalt placeholder:text-cobalt/35 ring-1 ring-inset transition outline-none focus:ring-2 focus:ring-cobalt ${
       bad ? "ring-coral" : "ring-cobalt/15 hover:ring-cobalt/30"
     }`;
 
   return (
-    <form onSubmit={onSubmit} noValidate className="relative rounded-[2.5rem] bg-cream p-6 sm:p-10" aria-describedby="waitlist-privacy">
+    <form onSubmit={onSubmit} noValidate className="relative rounded-[2rem] bg-cream p-6 sm:p-9" aria-describedby="waitlist-privacy">
       {TURNSTILE_KEY ? <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer /> : null}
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="wl-first-name" className="text-[0.95rem] font-semibold">
-            first name
+            First name
           </label>
           <input
             id="wl-first-name"
@@ -127,7 +126,7 @@ export function WaitlistForm() {
             autoComplete="given-name"
             required
             maxLength={80}
-            placeholder="your first name"
+            placeholder="Your first name"
             aria-invalid={!!errors.firstName}
             aria-describedby={errors.firstName ? "wl-first-name-err" : undefined}
             className={inputClass(errors.firstName)}
@@ -136,7 +135,7 @@ export function WaitlistForm() {
         </div>
         <div>
           <label htmlFor="wl-email" className="text-[0.95rem] font-semibold">
-            email address
+            Email address
           </label>
           <input
             id="wl-email"
@@ -159,17 +158,17 @@ export function WaitlistForm() {
       </div>
 
       <fieldset className="mt-6" aria-describedby={errors.referral ? "wl-ref-err" : undefined}>
-        <legend className="text-[0.95rem] font-semibold">how did you hear about enyday?</legend>
+        <legend className="text-[0.95rem] font-semibold">How did you hear about enyday?</legend>
         <div className="mt-3 flex flex-wrap gap-2" role="radiogroup" aria-required="true">
           {REFERRAL_OPTIONS.map((o, i) => {
             const checked = referral === o.value;
             return (
               <label
                 key={o.value}
-                className={`relative inline-flex min-h-11 cursor-pointer select-none items-center rounded-full px-5 text-[0.95rem] font-medium lowercase ring-1 ring-inset transition has-[:focus-visible]:outline has-[:focus-visible]:outline-[3px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-coral ${
+                className={`relative inline-flex min-h-11 cursor-pointer select-none items-center rounded-full px-4 text-[0.95rem] font-medium ring-1 ring-inset transition has-[:focus-visible]:outline has-[:focus-visible]:outline-[3px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-coral ${
                   checked
-                    ? "bg-periwinkle text-cobalt ring-periwinkle"
-                    : `bg-transparent text-cobalt hover:bg-paper hover:ring-cobalt/40 ${errors.referral ? "ring-coral" : "ring-cobalt/25"}`
+                    ? "bg-cobalt text-cream ring-cobalt"
+                    : `bg-paper text-cobalt hover:ring-cobalt/40 ${errors.referral ? "ring-coral" : "ring-cobalt/15"}`
                 }`}
               >
                 <input
@@ -189,18 +188,13 @@ export function WaitlistForm() {
         {errors.referral && <FieldError id="wl-ref-err">{errors.referral}</FieldError>}
       </fieldset>
 
-      <div aria-hidden="true" className="pointer-events-none absolute bottom-[10.75rem] right-8 hidden sm:block">
-        <Tooth className="size-14 -rotate-6 text-cobalt" />
-        <Burst className="absolute -right-5 -top-3 size-6 text-cobalt" />
-      </div>
-
       {/* honeypot: hidden from people and assistive tech */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
         <label htmlFor="wl-company">Company</label>
         <input id="wl-company" name="company" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
-      <label className="mt-6 flex cursor-pointer items-start gap-3 pr-0 text-[0.95rem] leading-snug text-cobalt-soft sm:pr-20">
+      <label className="mt-6 flex cursor-pointer items-start gap-3 text-[0.92rem] leading-snug text-cobalt-soft">
         <input
           id="wl-consent"
           name="consent"
@@ -216,7 +210,7 @@ export function WaitlistForm() {
 
       {TURNSTILE_KEY ? <div className="cf-turnstile mt-5" data-sitekey={TURNSTILE_KEY} data-theme="light" /> : null}
 
-      <button type="submit" disabled={sending} className={buttonClass("primary", "mt-7 w-full !text-xl sm:min-h-16")}>
+      <button type="submit" disabled={sending} className={buttonClass("primary", "mt-7 w-full text-lg sm:min-h-14")}>
         {sending ? "joining…" : (
           <>
             join the waitlist <Arrow />
