@@ -35,8 +35,8 @@ Google Fonts, free for commercial use, and self-hosted by Next.js at build time.
 The wordmark (`src/components/logo-paths.ts`) was traced from your logo file into vector paths, so it's your exact logo
 at any size, never retyped in a font. The favicon is traced from the "e" icon.
 
-The product visuals are a **concept rendering** built in SVG from the periwinkle pen reference, and are labeled that way
-on the site.
+The product photos live in `public/images/` (gloss pen + founder photos). The gloss is still labeled "in development" on the
+site.
 
 ## Setup: connect the waitlist (about 10 minutes)
 

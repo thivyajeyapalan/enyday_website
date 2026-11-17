@@ -1,5 +1,4 @@
-import { GlossCap, GlossPen } from "./GlossPen";
-import { Sparkle } from "./Logo";
+import Image from "next/image";
 import { Reveal } from "./Reveal";
 import { Arrow, ButtonLink, StatusPill } from "./ui";
 
@@ -9,32 +8,18 @@ export function Gloss() {
   return (
     <section id="gloss" aria-labelledby="gloss-title" className="gutter py-20 md:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 md:gap-16 lg:gap-24">
-        {/* visual: one product, two angles */}
+        {/* visual */}
         <Reveal className="relative order-last min-w-0 md:order-first">
-          <div className="relative aspect-[5/6] w-full overflow-hidden rounded-[2.25rem] bg-[radial-gradient(120%_90%_at_30%_15%,#c4cdf9_0%,#9eadf4_55%,#8d9eef_100%)] md:rounded-[2.75rem]">
-            <div className="absolute bottom-[11%] left-[16%] h-5 w-[30%] rounded-[50%] bg-cobalt/30 blur-lg" aria-hidden="true" />
-            <div className="absolute bottom-[9%] right-[12%] h-5 w-[34%] rounded-[50%] bg-cobalt/25 blur-lg" aria-hidden="true" />
-
-            {/* angle 1: capped */}
-            <div className="absolute bottom-[12%] left-[20%] h-[76%] -rotate-6">
-              <GlossPen className="h-full w-auto drop-shadow-[0_26px_30px_rgba(27,36,112,0.3)]" />
-            </div>
-            {/* angle 2: same pen, uncapped to show the applicator */}
-            <div className="absolute bottom-[10%] left-[50%] h-[70%] rotate-[9deg]">
-              <GlossPen
-                variant="open"
-                title="Concept rendering of the gloss pen with the cap removed, showing the applicator"
-                className="h-full w-auto drop-shadow-[0_22px_26px_rgba(27,36,112,0.28)]"
-              />
-            </div>
-            {/* the cap, set down beside it */}
-            <div className="absolute bottom-[7%] right-[6%] h-[24%] rotate-[78deg]">
-              <GlossCap className="h-full w-auto drop-shadow-[0_14px_18px_rgba(27,36,112,0.22)]" />
-            </div>
-
-            <Sparkle className="absolute left-[10%] top-[10%] size-9 animate-twinkle text-cream" />
+          <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[2.25rem] bg-[#ece9ea] md:rounded-[2.75rem]">
+            <Image
+              src="/images/gloss-angled.webp"
+              alt="The enyday gloss pen lying on a glossy surface, cap off to show the brush applicator"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
             <p className="absolute bottom-4 left-5 text-[0.7rem] font-medium tracking-wide text-cobalt/60">
-              concept rendering · final design may change
+              in development · final design may change
             </p>
           </div>
         </Reveal>

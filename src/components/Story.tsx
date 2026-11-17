@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Sparkle } from "./Logo";
 import { Reveal } from "./Reveal";
 
@@ -36,8 +37,59 @@ export function Story() {
             <DayLine />
           </Reveal>
         </div>
+
+        <Founder />
       </div>
     </section>
+  );
+}
+
+function Founder() {
+  return (
+    <Reveal className="mt-16 md:mt-24">
+      <div className="grid items-center gap-8 rounded-[2rem] bg-paper p-6 ring-1 ring-cobalt/[0.06] sm:p-8 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:gap-12 md:p-10">
+        <div className="min-w-0">
+          <p className="eyebrow text-coral">meet the founder</p>
+          <h3 className="mt-4 font-display text-3xl font-semibold tracking-[-0.03em] md:text-4xl">
+            Thivya <span className="em">Jeyapalan</span>
+          </h3>
+          <div className="mt-5 max-w-xl space-y-4 text-lg leading-relaxed text-cobalt-soft">
+            <p>
+              Thivya is really passionate about oral health. Her parents own dental practices, so she grew up seeing
+              first-hand how important preventative oral care is, and how invasive whitening can be.
+            </p>
+            <p>enyday is her way of making gentle, everyday care easier for the moments between brushing.</p>
+          </div>
+        </div>
+
+        <div className="grid min-w-0 grid-cols-2 gap-3 sm:gap-4">
+          <figure className="min-w-0">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-periwinkle-mist">
+              <Image
+                src="/images/founder.webp"
+                alt="Thivya Jeyapalan smiling in a dental clinic, with a dental X-ray on the screen behind her"
+                fill
+                sizes="(min-width: 768px) 220px, 45vw"
+                className="object-cover object-[62%_40%]"
+              />
+            </div>
+            <figcaption className="mt-2 text-xs text-cobalt/60">in the clinic</figcaption>
+          </figure>
+          <figure className="min-w-0">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-periwinkle-mist">
+              <Image
+                src="/images/founder-basecamp.webp"
+                alt="Thivya hugging a fellow founder on stage while holding a $10,000 cheque made out to enyday for second place at Basecamp 2026"
+                fill
+                sizes="(min-width: 768px) 220px, 45vw"
+                className="object-cover object-[52%_50%]"
+              />
+            </div>
+            <figcaption className="mt-2 text-xs text-cobalt/60">2nd place, DMZ Basecamp 2026</figcaption>
+          </figure>
+        </div>
+      </div>
+    </Reveal>
   );
 }
 

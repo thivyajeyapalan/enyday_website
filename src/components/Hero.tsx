@@ -1,4 +1,4 @@
-import { GlossPen } from "./GlossPen";
+import Image from "next/image";
 import { Logo, Sparkle } from "./Logo";
 import { Arrow, ButtonLink, StatusPill } from "./ui";
 
@@ -39,26 +39,22 @@ export function Hero() {
 
         {/* product stage */}
         <div className="relative animate-fade-up [animation-delay:200ms]">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[520px] overflow-hidden rounded-[2.25rem] bg-periwinkle md:rounded-[2.75rem]">
-            {/* soft studio light */}
-            <div className="absolute -left-1/4 -top-1/4 size-[85%] rounded-full bg-paper/45 blur-3xl" aria-hidden="true" />
-            <div className="absolute -bottom-1/3 -right-1/4 size-[80%] rounded-full bg-periwinkle-deep/60 blur-3xl" aria-hidden="true" />
-            {/* floor shadow */}
-            <div className="absolute bottom-[11%] left-1/2 h-6 w-[38%] -translate-x-1/2 rounded-[50%] bg-cobalt/30 blur-xl" aria-hidden="true" />
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[520px] overflow-hidden rounded-[2.25rem] bg-[#f1eeef] md:rounded-[2.75rem]">
+            <Image
+              src="/images/gloss-upright.webp"
+              alt="The enyday gloss pen, standing upright with its clear cap on"
+              fill
+              priority
+              sizes="(min-width: 768px) 520px, 100vw"
+              className="object-cover"
+            />
 
-            <div className="absolute inset-0 grid place-items-center">
-              <div className="h-[94%] animate-float [--tilt:-12deg]" style={{ transform: "rotate(-12deg)" }}>
-                <GlossPen className="h-full w-auto drop-shadow-[0_30px_40px_rgba(27,36,112,0.35)]" />
-              </div>
-            </div>
-
-            <Sparkle className="absolute right-[14%] top-[13%] size-10 animate-twinkle text-cream md:size-12" />
-            <Sparkle className="absolute bottom-[22%] left-[13%] size-5 animate-twinkle text-cream/90 [animation-delay:1.4s]" />
+            <Sparkle className="absolute right-[14%] top-[13%] size-10 animate-twinkle text-periwinkle md:size-12" />
+            <Sparkle className="absolute bottom-[22%] left-[13%] size-5 animate-twinkle text-periwinkle [animation-delay:1.4s]" />
 
             <div className="absolute left-4 top-4 md:left-5 md:top-5">
               <StatusPill>in development</StatusPill>
             </div>
-            <p className="absolute bottom-4 right-5 text-[0.7rem] font-medium tracking-wide text-cobalt/60">concept rendering</p>
           </div>
           <span
             aria-hidden="true"
