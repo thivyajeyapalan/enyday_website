@@ -4,7 +4,7 @@ import { Arrow, ButtonLink } from "./ui";
 
 export function Hero() {
   return (
-    <section id="top" aria-labelledby="hero-title" className="gutter relative overflow-hidden pb-16 pt-8 md:pb-24 md:pt-14">
+    <section id="top" aria-labelledby="hero-title" className="gutter relative overflow-clip pb-16 pt-8 md:pb-24 md:pt-14">
       {/* soft coral glow */}
       <div
         aria-hidden="true"
@@ -107,7 +107,7 @@ export function Ticker() {
     </ul>
   );
   return (
-    <div className="-rotate-1 overflow-hidden bg-coral py-3.5 text-paper md:py-4">
+    <div className="-rotate-1 overflow-clip bg-coral py-3.5 text-paper md:py-4">
       <div className="flex w-max animate-marquee motion-reduce:animate-none">
         {row(false)}
         {row(true)}

@@ -23,7 +23,7 @@ const ingredients = ["hydroxyapatite", "food-derived bioactives", "oral care tec
 
 export function Science() {
   return (
-    <section id="science" aria-labelledby="science-title" className="gutter relative overflow-hidden bg-periwinkle-mist py-20 md:py-32">
+    <section id="science" aria-labelledby="science-title" className="gutter relative overflow-clip bg-periwinkle-mist py-20 md:py-32">
       <Sparkle className="absolute right-[7%] top-16 hidden size-12 animate-twinkle text-coral md:block" />
       <div className="relative mx-auto max-w-7xl">
         <div className="grid items-end gap-8 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:gap-16">
