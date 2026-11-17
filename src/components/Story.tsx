@@ -15,9 +15,7 @@ export function Story() {
     <section id="approach" aria-labelledby="approach-title" className="gutter py-20 md:py-32">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="eyebrow chip">
-            <Sparkle className="size-3 text-coral" /> why enyday
-          </p>
+          <p className="script-label">why enyday</p>
           <h2 id="approach-title" className="mt-6 max-w-5xl text-[clamp(2.7rem,8.4vw,7rem)]">
             rethinking <span className="em-coral">preventive</span> oral care.
           </h2>

@@ -119,7 +119,7 @@ p { text-wrap: pretty; }
   font-style: italic;
   font-weight: 400;
   letter-spacing: -0.02em;
-  color: #e8435c; /* a touch deeper than coral so big headline text stays readable */
+  color: var(--color-coral);
 }
 
 /* Small uppercase status/eyebrow label */
@@ -137,20 +137,9 @@ p { text-wrap: pretty; }
   font-family: var(--font-script);
   font-size: clamp(2.9rem, 6vw, 3.8rem);
   line-height: 1;
-  color: var(--color-coral-deep);
+  color: var(--color-coral); /* exact brand coral #F85C70 */
   transform: rotate(-3deg);
   transform-origin: left center;
-}
-
-/* Eyebrow chip: coral pill with a sparkle */
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 999px;
-  background: var(--color-coral-mist);
-  color: var(--color-coral-deep);
-  padding: 0.45rem 0.9rem;
 }
 
 /* Scroll reveal: content is visible by default; JS only animates elements that start below the fold */

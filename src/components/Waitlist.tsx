@@ -21,7 +21,7 @@ export function Waitlist() {
           <p className="mt-4 max-w-md text-lg leading-relaxed text-cobalt/80 md:text-xl">
             Join our waitlist for a first look at the enyday gloss, product updates, and early access when we launch.
           </p>
-          <p aria-hidden="true" className="mt-8 hidden -rotate-3 font-script text-6xl leading-none text-coral-deep md:block">
+          <p aria-hidden="true" className="mt-8 hidden -rotate-3 font-script text-6xl leading-none text-coral md:block">
             see you soon
           </p>
         </Reveal>
