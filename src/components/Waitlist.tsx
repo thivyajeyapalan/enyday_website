@@ -12,7 +12,7 @@ export function Waitlist() {
 
       <div className="relative mx-auto grid max-w-7xl items-start gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-16">
         <Reveal className="min-w-0 md:sticky md:top-28">
-          <p className="script-label">be part of our enamily!</p>
+          <p className="script-label cream">be part of our enamily!</p>
           <h2 id="waitlist-title" className="mt-6 text-[clamp(2.6rem,6.4vw,5.2rem)]">
             join the <span className="em underline decoration-coral decoration-[5px] underline-offset-[10px]">waitlist.</span>
           </h2>

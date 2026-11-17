@@ -142,6 +142,9 @@ p { text-wrap: pretty; }
   transform-origin: left center;
 }
 
+/* Script label in the palette's off-white (cream), for coloured backgrounds */
+.script-label.cream { color: var(--color-cream); }
+
 /* Scroll reveal: content is visible by default; JS only animates elements that start below the fold */
 [data-reveal="pending"] { opacity: 0; transform: translateY(24px); }
 [data-reveal="shown"] {
