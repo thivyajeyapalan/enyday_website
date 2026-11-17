@@ -8,7 +8,7 @@ export const site = {
   description:
     "enyday is developing portable, science-driven oral wellness products using thoughtfully selected active ingredients to support preventive care beyond the bathroom.",
   /** Full URL of the official Instagram profile, e.g. "https://www.instagram.com/<handle>/" */
-  instagramUrl: null as string | null,
+  instagramUrl: "https://www.instagram.com/enyday.co/" as string | null,
   /** Public contact email, e.g. "hello@<your-domain>" */
   contactEmail: null as string | null,
   /** Canonical URL used for SEO and social previews. */
