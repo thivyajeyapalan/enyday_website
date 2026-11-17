@@ -15,8 +15,7 @@ export function Waitlist() {
             <Sparkle className="size-3 text-coral" /> be part of what&rsquo;s next
           </p>
           <h2 id="waitlist-title" className="mt-6 text-[clamp(2.6rem,6.4vw,5.2rem)]">
-            good oral health is an{" "}
-            <span className="em underline decoration-coral decoration-[5px] underline-offset-[10px]">everyday</span> thing.
+            join the <span className="em underline decoration-coral decoration-[5px] underline-offset-[10px]">waitlist.</span>
           </h2>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-cobalt/80 md:text-xl">
             We&rsquo;re developing a new approach to preventive oral care, designed to fit into everyday life.
