@@ -95,10 +95,6 @@ export function Science() {
               ingredient combinations and delivery formats that could make preventive oral care more accessible throughout
               the day.
             </p>
-            <p className="flex gap-3 pt-2 text-sm leading-relaxed text-cobalt/60">
-              <Sparkle className="mt-1 size-3 shrink-0 text-coral" />
-              <span>General educational information, not medical advice.</span>
-            </p>
           </Reveal>
         </div>
       </div>

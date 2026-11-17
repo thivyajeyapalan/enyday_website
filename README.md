@@ -12,7 +12,7 @@ src/
     admin/page.tsx           password-protected team dashboard
     api/waitlist/route.ts    saves signups (server-side only)
     api/admin/export/route.ts  CSV export
-  components/                sections + Logo, GlossPen (concept rendering), form
+  components/                sections + Logo, form
   lib/site.ts                Instagram URL, contact email, referral options
 supabase/migrations/0001_waitlist.sql
 ```
@@ -35,8 +35,7 @@ Google Fonts, free for commercial use, and self-hosted by Next.js at build time.
 The wordmark (`src/components/logo-paths.ts`) was traced from your logo file into vector paths, so it's your exact logo
 at any size, never retyped in a font. The favicon is traced from the "e" icon.
 
-The product photos live in `public/images/` (gloss pen + founder photos). The gloss is still labeled "in development" on the
-site.
+The product photos live in `public/images/` (gloss pen product shots and a lifestyle photo of the gloss in use).
 
 ## Setup: connect the waitlist (about 10 minutes)
 
@@ -90,7 +89,7 @@ Deploying on Vercel: import the repo, add the environment variables above, deplo
 
 ## Content guardrails
 
-The copy is written to stay within what enyday can say today: the gloss is labeled in development, there are no
+The copy is written to stay within what enyday can say today: the gloss is framed around its design goals, there are no
 efficacy, clinical, whitening or approval claims, hydroxyapatite is discussed only as enamel science (not as an
 ingredient), and the site says the gloss goes alongside brushing, flossing, fluoride toothpaste and dental visits.
 Please keep this in mind when editing copy.

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Logo, Sparkle } from "./Logo";
-import { Arrow, ButtonLink, StatusPill } from "./ui";
+import { Arrow, ButtonLink } from "./ui";
 
 export function Hero() {
   return (
@@ -66,10 +66,6 @@ export function Hero() {
 
             <Sparkle className="absolute right-[14%] top-[13%] size-10 animate-twinkle text-coral md:size-12" />
             <Sparkle className="absolute bottom-[22%] left-[13%] size-5 animate-twinkle text-periwinkle [animation-delay:1.4s]" />
-
-            <div className="absolute left-4 top-4 md:left-5 md:top-5">
-              <StatusPill>in development</StatusPill>
-            </div>
           </div>
 
           {/* sticker */}
