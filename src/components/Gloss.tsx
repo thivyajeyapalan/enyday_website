@@ -12,13 +12,14 @@ export function Gloss() {
         {/* visual: the gloss in use, with a product close-up tucked into the corner */}
         <Reveal className="relative order-last min-w-0 md:order-first">
           <div aria-hidden="true" className="absolute -right-4 -top-4 h-[60%] w-[55%] rounded-[2.5rem] bg-periwinkle md:-right-6 md:-top-6" />
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.25rem] bg-[#e9e7e4] md:rounded-[2.75rem]">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2.25rem] bg-[#e9e7e4] md:rounded-[2.75rem]">
             <Image
               src="/images/gloss-in-use.webp"
               alt="A person smiling while brushing the enyday gloss onto their teeth"
               fill
+              quality={92}
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-[52%_50%]"
+              className="object-cover object-[48%_45%]"
             />
             <Sparkle className="absolute right-[9%] top-[8%] size-8 animate-twinkle text-coral" />
           </div>
