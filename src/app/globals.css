@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/*
+  enyday design system
+  Layout: editorial single page on warm off-white, with soft periwinkle "stages" for product and
+  science, a full periwinkle waitlist band, and a cobalt footer. Coral appears only as a small accent.
+*/
+@theme {
+  /* Brand color, sampled from the logo files */
+  --color-cobalt: #263197;        /* wordmark, headlines, primary text */
+  --color-cobalt-soft: #4a55ad;   /* secondary text on light grounds */
+  --color-periwinkle: #9eadf4;    /* product color, waitlist band */
+  --color-periwinkle-deep: #7d8ee6;
+  --color-periwinkle-mist: #e4e8fc; /* science section ground */
+  --color-coral: #f85c70;         /* accent only */
+  --color-spark: #ff5757;         /* logo sparkle */
+  --color-cream: #f6f4f0;         /* main background */
+  --color-cream-deep: #ece8e1;
+  --color-paper: #ffffff;
+
+  /* Type */
+  --font-display: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-sacramento), "Brush Script MT", cursive;
+
+  /* Motion */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.9s var(--ease-soft) both;
+  --animate-twinkle: twinkle 3.6s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(var(--tilt, 0deg)); }
+    50% { transform: translateY(-14px) rotate(calc(var(--tilt, 0deg) + 1deg)); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes twinkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(0.82) rotate(12deg); opacity: 0.75; }
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-cobalt);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  font-weight: 650;
+}
+
+p { text-wrap: pretty; }
+
+::selection { background: var(--color-periwinkle); color: var(--color-cobalt); }
+
+:focus-visible {
+  outline: 3px solid var(--color-coral);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Section gutter: 16px minimum, clears phone side insets */
+.gutter {
+  padding-left: max(1.25rem, env(safe-area-inset-left, 0px));
+  padding-right: max(1.25rem, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 768px) {
+  .gutter {
+    padding-left: max(2.5rem, env(safe-area-inset-left, 0px));
+    padding-right: max(2.5rem, env(safe-area-inset-right, 0px));
+  }
+}
+
+/* Italic emphasis used inside headlines, as in the brand banners */
+.em {
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Small uppercase status/eyebrow label */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Scroll reveal: content is visible by default; JS only animates elements that start below the fold */
+[data-reveal="pending"] { opacity: 0; transform: translateY(24px); }
+[data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.9s var(--ease-soft), transform 0.9s var(--ease-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
