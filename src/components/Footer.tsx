@@ -49,10 +49,6 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-cream/15 pt-6 text-[0.82rem] leading-relaxed text-cream/60 md:flex-row md:justify-between md:gap-10">
-          <p className="max-w-2xl">
-            Products are in development and are not intended to replace established oral hygiene practices or professional
-            dental care.
-          </p>
           <p className="shrink-0">© 2026 enyday</p>
         </div>
       </div>
