@@ -4,9 +4,9 @@
  */
 export const site = {
   name: "enyday",
-  tagline: "More than brushing. More than basics.",
+  tagline: "Advancing oral health solutions for everyday life.",
   description:
-    "enyday is developing portable, science-driven oral care for life beyond the bathroom. Join the waitlist for first access to our enamel-care gloss.",
+    "enyday is developing portable, science-driven oral wellness products using thoughtfully selected active ingredients to support preventive care beyond the bathroom.",
   /** Full URL of the official Instagram profile, e.g. "https://www.instagram.com/<handle>/" */
   instagramUrl: null as string | null,
   /** Public contact email, e.g. "hello@<your-domain>" */

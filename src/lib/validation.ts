@@ -4,7 +4,7 @@ import { REFERRAL_OPTIONS, type ReferralValue } from "./site";
 const EMAIL_RE = /^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)*\.[A-Za-z]{2,}$/;
 
 export const CONSENT_TEXT =
-  "I agree to receive emails from enyday about the launch, product updates and early access. I can unsubscribe at any time.";
+  "Receive occasional updates from enyday. Unsubscribe at any time.";
 
 export type WaitlistInput = {
   firstName: string;

@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Gloss } from "@/components/Gloss";
-import { Hero } from "@/components/Hero";
+import { Hero, Ticker } from "@/components/Hero";
 import { Nav } from "@/components/Nav";
 import { Science } from "@/components/Science";
 import { Story } from "@/components/Story";
@@ -18,6 +18,7 @@ export default function Home() {
       <Nav />
       <main id="main">
         <Hero />
+        <Ticker />
         <Story />
         <Science />
         <Gloss />

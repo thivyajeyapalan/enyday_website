@@ -10,7 +10,7 @@ export function Footer() {
           <div className="min-w-0">
             <Logo className="w-[min(70vw,360px)]" word="var(--color-cream)" line="var(--color-periwinkle)" spark="var(--color-spark)" />
             <p className="mt-6 font-display text-xl tracking-[-0.01em] text-cream/85 md:text-2xl">
-              More than brushing. <span className="em">More than basics.</span>
+              Advancing oral health solutions for <span className="em text-coral">everyday life.</span>
             </p>
           </div>
 
@@ -34,10 +34,10 @@ export function Footer() {
             <li>
               {site.contactEmail ? (
                 <a href={`mailto:${site.contactEmail}`} className="text-cream/85 transition hover:text-cream">
-                  {site.contactEmail}
+                  Contact
                 </a>
               ) : (
-                <span className="text-cream/60">Contact email coming soon</span>
+                <span className="text-cream/60">Contact coming soon</span>
               )}
             </li>
             <li>
@@ -50,8 +50,8 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-4 border-t border-cream/15 pt-6 text-[0.82rem] leading-relaxed text-cream/60 md:flex-row md:justify-between md:gap-10">
           <p className="max-w-2xl">
-            enyday products are in development and not yet available for sale. Nothing on this site is medical advice. Keep
-            brushing, flossing, using fluoride toothpaste and seeing your dentist.
+            Products are in development and are not intended to replace established oral hygiene practices or professional
+            dental care.
           </p>
           <p className="shrink-0">© 2026 enyday</p>
         </div>

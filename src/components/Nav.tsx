@@ -11,8 +11,11 @@ export function Nav() {
         </a>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          <a href="#story" className="hidden rounded-full px-3 py-2 text-[0.95rem] font-medium text-cobalt/80 transition hover:text-cobalt sm:block">
-            Our Story
+          <a href="#approach" className="hidden rounded-full px-3 py-2 text-[0.95rem] font-medium text-cobalt/80 transition hover:text-cobalt sm:block">
+            Our Approach
+          </a>
+          <a href="#science" className="hidden rounded-full px-3 py-2 text-[0.95rem] font-medium text-cobalt/80 transition hover:text-cobalt sm:block">
+            Research
           </a>
           <a href="#gloss" className="hidden rounded-full px-3 py-2 text-[0.95rem] font-medium text-cobalt/80 transition hover:text-cobalt sm:block">
             The Gloss

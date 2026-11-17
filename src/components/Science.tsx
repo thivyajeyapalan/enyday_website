@@ -5,35 +5,40 @@ const points = [
   {
     n: 1,
     title: "acids come and go",
-    body: "Acidic drinks like coffee, certain teas, soda and citrus can contribute to enamel erosion. How much depends on the drink's acidity, how often you sip, and other factors.",
+    body: "Everyday foods and beverages expose enamel to acids throughout the day.",
   },
   {
     n: 2,
     title: "saliva works all day",
-    body: "Saliva is your mouth's built-in defense. It helps neutralize acids, clear things away, and supply minerals for enamel's natural remineralization process.",
+    body: "Saliva helps neutralize these acids and provides minerals that support natural remineralization.",
   },
   {
     n: 3,
     title: "enamel is mineral",
-    body: "Much of tooth enamel is hydroxyapatite, a calcium phosphate mineral. Researchers have explored hydroxyapatite-containing oral care for enamel remineralization and surface protection.",
+    body: "Much of tooth enamel is hydroxyapatite, a calcium phosphate mineral that researchers continue to study.",
   },
 ];
 
+const ingredients = ["hydroxyapatite", "food-derived bioactives", "oral care technologies"];
+
 export function Science() {
   return (
-    <section id="science" aria-labelledby="science-title" className="gutter bg-periwinkle-mist py-20 md:py-32">
-      <div className="mx-auto max-w-7xl">
+    <section id="science" aria-labelledby="science-title" className="gutter relative overflow-hidden bg-periwinkle-mist py-20 md:py-32">
+      <Sparkle className="absolute right-[7%] top-16 hidden size-12 animate-twinkle text-coral md:block" />
+      <div className="relative mx-auto max-w-7xl">
         <div className="grid items-end gap-8 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:gap-16">
           <Reveal className="min-w-0">
-            <p className="eyebrow text-coral">the science</p>
-            <h2 id="science-title" className="mt-5 text-[clamp(2.5rem,6.6vw,5.4rem)]">
-              your mouth has its own <span className="em">defense system.</span>
+            <p className="eyebrow chip">
+              <Sparkle className="size-3 text-coral" /> our research
+            </p>
+            <h2 id="science-title" className="mt-6 text-[clamp(2.5rem,6.6vw,5.4rem)]">
+              science-driven <span className="em-coral">oral wellness.</span>
             </h2>
           </Reveal>
           <Reveal delay={100} className="min-w-0 space-y-4 text-lg leading-relaxed text-cobalt-soft">
             <p>
-              Saliva helps neutralize acids and supports the natural processes that keep enamel healthy. Minerals such as
-              hydroxyapatite are also an important part of the science of enamel care.
+              Tooth enamel is exposed to acids from everyday foods and beverages. Saliva helps neutralize these acids and
+              provides minerals that support the natural remineralization process.
             </p>
           </Reveal>
         </div>
@@ -59,33 +64,40 @@ export function Science() {
               </ol>
             </div>
             <figcaption className="sr-only">
-              Illustration: acidic drinks reach the tooth surface, saliva forms a protective layer that helps neutralize
-              acids and supply minerals, and enamel is made largely of hydroxyapatite crystals.
+              Illustration: acids from food and drink reach the tooth surface, saliva helps neutralize them and supply
+              minerals, and enamel is made largely of hydroxyapatite crystals.
             </figcaption>
           </figure>
         </Reveal>
 
         <div className="mt-14 grid gap-10 md:mt-20 md:grid-cols-2 md:gap-16">
           <Reveal className="min-w-0">
-            <p className="font-display text-[clamp(1.9rem,4.2vw,3.2rem)] font-semibold leading-[1.02] tracking-[-0.035em] text-balance">
-              a little more science. <span className="em">a lot more everyday.</span>
+            <p className="text-lg leading-relaxed text-cobalt-soft">
+              Research into ingredients such as hydroxyapatite, food-derived bioactives, and other oral care technologies
+              continues to inform new approaches to preventive dental health.
             </p>
+            <ul className="mt-6 flex flex-wrap gap-2" aria-label="Areas of research">
+              {ingredients.map((i, n) => (
+                <li
+                  key={i}
+                  className={`rounded-full px-4 py-2 text-[0.95rem] font-medium ${
+                    n === 0 ? "bg-coral text-paper" : "bg-paper text-cobalt ring-1 ring-cobalt/10"
+                  }`}
+                >
+                  {i}
+                </li>
+              ))}
+            </ul>
           </Reveal>
-          <Reveal delay={100} className="min-w-0 space-y-4 text-lg leading-relaxed text-cobalt-soft">
-            <p>
-              At enyday, we&rsquo;re exploring how emerging oral care ingredients and thoughtful product design could make
-              preventive care more convenient.
-            </p>
-            <p>
-              We&rsquo;re working with dentists and researchers to explore innovative ingredients and formulations, with a
-              simple goal: make thoughtful, science-driven oral care easier to fit into everyday life.
+          <Reveal delay={100} className="min-w-0 space-y-4">
+            <p className="font-display text-[clamp(1.5rem,3vw,2.1rem)] font-medium leading-tight tracking-[-0.025em] text-balance">
+              At enyday, we&rsquo;re working with <span className="em-coral">dentists and researchers</span> to explore
+              ingredient combinations and delivery formats that could make preventive oral care more accessible throughout
+              the day.
             </p>
             <p className="flex gap-3 pt-2 text-sm leading-relaxed text-cobalt/60">
               <Sparkle className="mt-1 size-3 shrink-0 text-coral" />
-              <span>
-                This is general educational information, not medical advice. Our formulation is still in development and
-                being evaluated, so we aren&rsquo;t making claims about what it does yet.
-              </span>
+              <span>General educational information, not medical advice.</span>
             </p>
           </Reveal>
         </div>

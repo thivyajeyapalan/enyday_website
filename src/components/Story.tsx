@@ -12,25 +12,32 @@ const moments = [
 
 export function Story() {
   return (
-    <section id="story" aria-labelledby="story-title" className="gutter py-20 md:py-32">
+    <section id="approach" aria-labelledby="approach-title" className="gutter py-20 md:py-32">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <p className="eyebrow text-coral">our story</p>
-          <h2 id="story-title" className="mt-5 max-w-5xl text-[clamp(2.7rem,8.4vw,7rem)]">
-            life happens <span className="em">between</span> brushing.
+          <p className="eyebrow chip">
+            <Sparkle className="size-3 text-coral" /> why enyday
+          </p>
+          <h2 id="approach-title" className="mt-6 max-w-5xl text-[clamp(2.7rem,8.4vw,7rem)]">
+            rethinking <span className="em-coral">preventive</span> oral care.
           </h2>
         </Reveal>
 
         <div className="mt-12 grid gap-12 md:mt-20 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-16">
           <Reveal className="min-w-0 space-y-5 text-lg leading-relaxed text-cobalt-soft md:text-xl">
             <p className="font-display text-2xl font-medium leading-snug tracking-[-0.02em] text-cobalt md:text-[1.75rem]">
-              Your morning coffee. Your afternoon matcha. Your favorite late-night snack.
+              Preventive oral health plays an important role in long-term dental health, yet most daily routines still
+              revolve around brushing and flossing.
             </p>
             <p>
-              What we eat and drink can affect our teeth throughout the day, but most oral care routines still happen only
-              twice a day.
+              Throughout the day, our teeth are exposed to foods, drinks, and changing conditions in the mouth. While oral
+              care has traditionally focused on morning and nighttime routines, there is an opportunity to develop more
+              convenient solutions for the hours in between.
             </p>
-            <p>We&rsquo;re exploring ways to make caring for your teeth easier in the moments in between.</p>
+            <p>
+              enyday is exploring new approaches to everyday oral wellness through portable formats, innovative active
+              ingredients, and research-informed product development.
+            </p>
           </Reveal>
 
           <Reveal delay={120} className="min-w-0">
@@ -47,11 +54,13 @@ export function Story() {
 function Founder() {
   return (
     <Reveal className="mt-16 md:mt-24">
-      <div className="grid items-center gap-8 rounded-[2rem] bg-paper p-6 ring-1 ring-cobalt/[0.06] sm:p-8 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:gap-12 md:p-10">
+      <div className="grid items-center gap-8 rounded-[2rem] bg-coral-mist/60 p-6 ring-1 ring-coral/15 sm:p-8 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:gap-12 md:p-10">
         <div className="min-w-0">
-          <p className="eyebrow text-coral">meet the founder</p>
+          <p className="eyebrow chip">
+            <Sparkle className="size-3 text-coral" /> meet the founder
+          </p>
           <h3 className="mt-4 font-display text-3xl font-semibold tracking-[-0.03em] md:text-4xl">
-            Thivya <span className="em">Jeyapalan</span>
+            Thivya <span className="em-coral">Jeyapalan</span>
           </h3>
           <div className="mt-5 max-w-xl space-y-4 text-lg leading-relaxed text-cobalt-soft">
             <p>
@@ -64,7 +73,7 @@ function Founder() {
 
         <div className="grid min-w-0 grid-cols-2 gap-3 sm:gap-4">
           <figure className="min-w-0">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-periwinkle-mist">
+            <div className="relative aspect-[4/5] -rotate-2 overflow-hidden rounded-2xl bg-periwinkle-mist shadow-[0_18px_30px_-18px_rgba(38,49,151,0.5)] ring-4 ring-paper transition duration-500 hover:rotate-0">
               <Image
                 src="/images/founder.webp"
                 alt="Thivya Jeyapalan smiling in a dental clinic, with a dental X-ray on the screen behind her"
@@ -73,10 +82,10 @@ function Founder() {
                 className="object-cover object-[62%_40%]"
               />
             </div>
-            <figcaption className="mt-2 text-xs text-cobalt/60">in the clinic</figcaption>
+            <figcaption className="mt-3 text-xs text-cobalt/60">in the clinic</figcaption>
           </figure>
           <figure className="min-w-0">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-periwinkle-mist">
+            <div className="relative aspect-[4/5] rotate-2 overflow-hidden rounded-2xl bg-periwinkle-mist shadow-[0_18px_30px_-18px_rgba(38,49,151,0.5)] ring-4 ring-paper transition duration-500 hover:rotate-0">
               <Image
                 src="/images/founder-basecamp.webp"
                 alt="Thivya hugging a fellow founder on stage while holding a $10,000 cheque made out to enyday for second place at Basecamp 2026"
@@ -85,7 +94,7 @@ function Founder() {
                 className="object-cover object-[52%_50%]"
               />
             </div>
-            <figcaption className="mt-2 text-xs text-cobalt/60">2nd place, DMZ Basecamp 2026</figcaption>
+            <figcaption className="mt-3 text-xs text-cobalt/60">2nd place, DMZ Basecamp 2026</figcaption>
           </figure>
         </div>
       </div>
@@ -105,7 +114,7 @@ function DayLine() {
         {/* the in-between, highlighted */}
         <span
           aria-hidden="true"
-          className="absolute left-[10px] top-[calc(20%+6px)] h-[calc(60%-12px)] w-[3px] rounded-full bg-periwinkle md:left-[calc(10%+16px)] md:top-[10px] md:h-[3px] md:w-[calc(80%-32px)]"
+          className="absolute left-[10px] top-[calc(20%+6px)] h-[calc(60%-12px)] w-[3px] rounded-full bg-coral/70 md:left-[calc(10%+16px)] md:top-[10px] md:h-[3px] md:w-[calc(80%-32px)]"
         />
 
         {moments.map((m, i) => (
@@ -132,8 +141,8 @@ function DayLine() {
       </ol>
 
       <p className="mt-8 flex items-center gap-3 border-t border-cobalt/10 pt-6 text-[0.95rem] text-cobalt-soft md:mt-12">
-        <span aria-hidden="true" className="h-[3px] w-8 shrink-0 rounded-full bg-periwinkle" />
-        about 16 hours of real life between brushes. that&rsquo;s where enyday comes in.
+        <span aria-hidden="true" className="h-[3px] w-8 shrink-0 rounded-full bg-coral" />
+        about 16 hours between brushes. that&rsquo;s the space enyday is exploring.
       </p>
     </figure>
   );
