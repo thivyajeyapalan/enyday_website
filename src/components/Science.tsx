@@ -28,9 +28,7 @@ export function Science() {
       <div className="relative mx-auto max-w-7xl">
         <div className="grid items-end gap-8 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:gap-16">
           <Reveal className="min-w-0">
-            <p className="eyebrow chip">
-              <Sparkle className="size-3 text-coral" /> our research
-            </p>
+            <p className="script-label">our research</p>
             <h2 id="science-title" className="mt-6 text-[clamp(2.5rem,6.6vw,5.4rem)]">
               science-driven <span className="em-coral">oral wellness.</span>
             </h2>

@@ -39,9 +39,7 @@ export function Gloss() {
         {/* copy */}
         <div className="min-w-0">
           <Reveal>
-            <p className="eyebrow chip">
-              <Sparkle className="size-3 text-coral" /> our first product
-            </p>
+            <p className="script-label">our first product</p>
             <h2 id="gloss-title" className="mt-6 text-[clamp(2.8rem,7vw,5.6rem)]">
               introducing <span className="em-coral">the gloss.</span>
             </h2>

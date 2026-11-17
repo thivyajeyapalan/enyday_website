@@ -131,6 +131,17 @@ p { text-wrap: pretty; }
   text-transform: uppercase;
 }
 
+/* Handwritten section label, like the "see you soon" script */
+.script-label {
+  display: inline-block;
+  font-family: var(--font-script);
+  font-size: clamp(2.9rem, 6vw, 3.8rem);
+  line-height: 1;
+  color: var(--color-coral-deep);
+  transform: rotate(-3deg);
+  transform-origin: left center;
+}
+
 /* Eyebrow chip: coral pill with a sparkle */
 .chip {
   display: inline-flex;
